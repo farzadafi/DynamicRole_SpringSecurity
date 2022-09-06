@@ -3,7 +3,9 @@ package com.example.Spring.service.security;
 import com.example.Spring.model.User;
 import com.example.Spring.service.role.RoleServiceImpel;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Component;
 
+@Component("SecurityServiceImpel")
 public class SecurityServiceImpel implements SecurityService {
 
     private final RoleServiceImpel roleServiceImpel;
