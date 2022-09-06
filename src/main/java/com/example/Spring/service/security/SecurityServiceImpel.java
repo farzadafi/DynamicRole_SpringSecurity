@@ -15,7 +15,7 @@ public class SecurityServiceImpel implements SecurityService {
     }
 
     @Override
-    public boolean hasPermission(String role,String url){
+    public boolean isAuthenticated(String role,String url){
         return roleServiceImpel.isPermissionRoleToUrl(role,url);
     }
 

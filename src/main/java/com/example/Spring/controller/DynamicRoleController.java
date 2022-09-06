@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DynamicRoleController {
 
     @GetMapping("/test")
-    @PreAuthorize("@SecurityServiceImpel.hasPermission(@SecurityServiceImpel.currentUser.getRole().role,'/dynamicRole/test')")
+    @PreAuthorize("@SecurityServiceImpel.isAuthenticated(@SecurityServiceImpel.currentUser.getRole().role,'/dynamicRole/test')")
     public String dynamicRoleTest(){
         return "OK";
     }
